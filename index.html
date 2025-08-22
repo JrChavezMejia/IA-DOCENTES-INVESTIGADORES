@@ -3,9 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Mini Curso IA — Docentes 55+</title>
-<meta name="description" content="Guía andragógica y atractiva de IA para docentes universitarios. Acceso con usuario y clave. Enlaces generales y especiales.">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<title>CURSO PARA DOCENTES E INVESTIGADORES — Mini Curso IA</title>
+<meta name="description" content="Guía andragógica y atractiva de IA para docentes e investigadores universitarios. Acceso con usuario y clave. Enlaces generales y especiales.">
 <style>
   :root {
     --bg: #0b1220;
@@ -38,748 +37,149 @@
     --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   }
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
 
-  html, body {
-    height: 100%;
-    scroll-behavior: smooth;
-    transition: var(--transition);
-    font-family: 'Inter', ui-sans-serif, system-ui, 'Segoe UI', Roboto, sans-serif;
-  }
+  html, body { height: 100%; scroll-behavior: smooth; transition: var(--transition); }
 
   body {
+    font-family: 'Inter', ui-sans-serif, system-ui, 'Segoe UI', Roboto, sans-serif;
     background: radial-gradient(1200px 800px at 10% -10%, #0c1a34, #0b1220 60%), linear-gradient(180deg, #0b1220, #0a101f);
-    color: var(--text);
-    line-height: 1.6;
-    overflow-x: hidden;
+    color: var(--text); line-height: 1.6; overflow-x: hidden;
   }
 
-  [data-theme="light"] body {
-    background: linear-gradient(135deg, #f5f7fb 0%, #e6e9f0 100%);
-  }
+  [data-theme="light"] body { background: linear-gradient(135deg, #f5f7fb 0%, #e6e9f0 100%); }
 
-  a {
-    color: var(--brand2);
-    text-decoration: none;
-    transition: var(--transition);
-  }
+  a { color: var(--brand2); text-decoration: none; transition: var(--transition); }
+  a:hover { color: var(--brand); text-decoration: underline; }
 
-  a:hover {
-    color: var(--brand);
-    text-decoration: underline;
-  }
-
-  .wrap {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 16px;
-  }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 16px; }
 
   /* Header */
   header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    backdrop-filter: saturate(180%) blur(12px);
-    background: rgba(9, 16, 33, 0.85);
-    border-bottom: 1px solid var(--border);
-    transition: var(--transition);
+    position: sticky; top: 0; z-index: 100; backdrop-filter: saturate(180%) blur(12px);
+    background: rgba(9, 16, 33, 0.85); border-bottom: 1px solid var(--border); transition: var(--transition);
   }
-
-  .header-scrolled {
-    background: rgba(9, 16, 33, 0.95);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  }
-
-  .top {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 16px;
-  }
-
-  .logo {
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, var(--brand), var(--brand2));
-    display: grid;
-    place-items: center;
-    color: #042;
-    font-weight: 900;
-    font-size: 18px;
-    box-shadow: 0 4px 10px rgba(94, 234, 212, 0.3);
-    transition: var(--transition);
-  }
-
-  .logo:hover {
-    transform: rotate(10deg);
-    box-shadow: 0 6px 15px rgba(94, 234, 212, 0.4);
-  }
-
-  .brand {
-    font-weight: 900;
-    letter-spacing: 0.3px;
-    font-size: 18px;
-    background: linear-gradient(to right, var(--brand), var(--brand2));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .top .search {
-    flex: 1;
-    position: relative;
-  }
+  .header-scrolled { background: rgba(9, 16, 33, 0.95); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); }
+  .top { display: flex; align-items: center; gap: 12px; padding: 12px 16px; }
+  .logo { width: 40px; height: 40px; border-radius: 12px; background: linear-gradient(135deg, var(--brand), var(--brand2)); display: grid; place-items: center; color: #042; font-weight: 900; font-size: 18px; box-shadow: 0 4px 10px rgba(94, 234, 212, 0.3); transition: var(--transition); }
+  .logo:hover { transform: rotate(10deg); box-shadow: 0 6px 15px rgba(94, 234, 212, 0.4); }
+  .brand { font-weight: 900; letter-spacing: 0.3px; font-size: 18px; background: linear-gradient(to right, var(--brand), var(--brand2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .top .search { flex: 1; position: relative; }
 
   .search input {
-    width: 100%;
-    padding: 12px 16px 12px 42px;
-    border-radius: 999px;
-    border: 1px solid var(--border);
-    background: rgba(10, 20, 40, 0.7);
-    color: var(--text);
-    font-size: 15px;
-    transition: var(--transition);
+    width: 100%; padding: 12px 16px 12px 42px; border-radius: 999px; border: 1px solid var(--border);
+    background: rgba(10, 20, 40, 0.7); color: var(--text); font-size: 15px; transition: var(--transition);
   }
+  .search input:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px rgba(94, 234, 212, 0.2); }
+  .search::before { content: "🔍"; position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--muted); font-size: 16px; }
 
-  .search input:focus {
-    outline: none;
-    border-color: var(--brand);
-    box-shadow: 0 0 0 3px rgba(94, 234, 212, 0.2);
-  }
+  /* Predictive suggestions */
+  .suggestions { position: absolute; top: 48px; left: 0; right: 0; background: var(--panel); border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 12px 30px rgba(0,0,0,.35); overflow: hidden; display: none; }
+  .suggestions.visible { display: block; }
+  .suggestion { padding: 10px 14px; display: flex; align-items: center; gap: 10px; cursor: pointer; }
+  .suggestion:hover, .suggestion.active { background: rgba(12, 24, 51, 0.5); }
+  .suggestion small { color: var(--muted); margin-left: auto; }
 
-  .search::before {
-    content: "🔍";
-    position: absolute;
-    left: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--muted);
-    font-size: 16px;
-  }
-
-  .actions {
-    display: flex;
-    gap: 10px;
-  }
-
-  .btn {
-    background: linear-gradient(135deg, var(--brand), var(--brand2));
-    color: #052;
-    border: none;
-    border-radius: 12px;
-    padding: 10px 16px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: var(--transition);
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    box-shadow: 0 4px 10px rgba(94, 234, 212, 0.3);
-  }
-
-  .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(94, 234, 212, 0.4);
-  }
-
-  .btn.ghost {
-    background: transparent;
-    color: var(--text);
-    border: 1px dashed var(--border);
-    box-shadow: none;
-  }
-
-  .btn.ghost:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: var(--brand);
-  }
-
-  .btn.soft {
-    background: rgba(14, 26, 52, 0.7);
-    color: var(--text);
-    border: 1px solid var(--border);
-    box-shadow: none;
-  }
-
-  .btn.soft:hover {
-    background: rgba(14, 26, 52, 0.9);
-    border-color: var(--brand);
-  }
+  .actions { display: flex; gap: 10px; }
+  .btn { background: linear-gradient(135deg, var(--brand), var(--brand2)); color: #052; border: none; border-radius: 12px; padding: 10px 16px; font-weight: 700; cursor: pointer; transition: var(--transition); display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 10px rgba(94, 234, 212, 0.3); }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(94, 234, 212, 0.4); }
+  .btn.ghost { background: transparent; color: var(--text); border: 1px dashed var(--border); box-shadow: none; }
+  .btn.ghost:hover { background: rgba(255, 255, 255, 0.05); border-color: var(--brand); }
+  .btn.soft { background: rgba(14, 26, 52, 0.7); color: var(--text); border: 1px solid var(--border); box-shadow: none; }
+  .btn.soft:hover { background: rgba(14, 26, 52, 0.9); border-color: var(--brand); }
 
   /* Layout */
-  .grid {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 24px;
-    margin-top: 24px;
-  }
+  .grid { display: grid; grid-template-columns: 280px 1fr; gap: 24px; margin-top: 24px; }
+  @media (max-width: 1000px) { .grid { grid-template-columns: 1fr; } .aside { order: 2; } .main { order: 1; } }
+  .aside { display: flex; flex-direction: column; gap: 16px; position: sticky; top: 90px; height: fit-content; max-height: calc(100vh - 120px); overflow-y: auto; }
 
-  @media (max-width: 1000px) {
-    .grid {
-      grid-template-columns: 1fr;
-    }
-    .aside {
-      order: 2;
-    }
-    .main {
-      order: 1;
-    }
-  }
+  .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; box-shadow: var(--card-shadow); transition: var(--transition); overflow: hidden; }
+  .card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); }
+  .card .pad { padding: 20px; }
 
-  .aside {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    position: sticky;
-    top: 90px;
-    height: fit-content;
-    max-height: calc(100vh - 120px);
-    overflow-y: auto;
-  }
+  .nav a { display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 12px; color: var(--text); transition: var(--transition); margin: 4px 0; }
+  .nav a:hover { background: rgba(12, 24, 51, 0.5); transform: translateX(5px); }
+  .nav a.active { background: linear-gradient(90deg, rgba(94, 234, 212, 0.2), transparent); border-left: 3px solid var(--brand); }
 
-  .card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    box-shadow: var(--card-shadow);
-    transition: var(--transition);
-    overflow: hidden;
-  }
+  .section { scroll-margin-top: 100px; opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .section.visible { opacity: 1; transform: translateY(0); }
+  .section h2 { margin: 0 0 12px; font-size: clamp(20px, 4vw, 28px); background: linear-gradient(to right, var(--brand), var(--brand2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .section p, .section li { color: var(--muted); line-height: 1.7; }
 
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-  }
+  .tag { font-size: 12px; color: #041; background: linear-gradient(135deg, var(--brand), var(--brand2)); padding: 4px 10px; border-radius: 999px; font-weight: 800; border: 1px solid rgba(0, 102, 0, 0.2); }
+  .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+  .k { font-family: ui-monospace, Menlo, Consolas, monospace; background: rgba(11, 18, 32, 0.7); border: 1px solid var(--border); padding: 3px 8px; border-radius: 8px; font-size: 13px; }
+  .muted { color: var(--muted); }
 
-  .card .pad {
-    padding: 20px;
-  }
+  .post { display: flex; gap: 16px; padding: 16px; background: rgba(12, 20, 36, 0.5); border-radius: 16px; margin: 12px 0; transition: var(--transition); }
+  .post:hover { background: rgba(12, 20, 36, 0.8); transform: translateY(-3px); }
+  .post .avatar { min-width: 42px; height: 42px; border-radius: 12px; background: rgba(10, 26, 53, 0.7); border: 1px solid var(--border); display: grid; place-items: center; color: var(--muted); font-size: 18px; flex-shrink: 0; }
+  .post .content { flex: 1; }
+  .post h3 { margin: 0 0 6px; font-size: 18px; }
 
-  .nav a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 16px;
-    border-radius: 12px;
-    color: var(--text);
-    transition: var(--transition);
-    margin: 4px 0;
-  }
+  .hero { position: relative; overflow: hidden; }
+  .hero .pad { padding: 28px 20px; }
+  .hero .glow { position: absolute; inset: -40px -40px auto auto; width: 320px; height: 320px; background: radial-gradient(closest-side, rgba(34, 211, 238, 0.15), transparent); filter: blur(10px); pointer-events: none; z-index: 0; }
 
-  .nav a:hover {
-    background: rgba(12, 24, 51, 0.5);
-    transform: translateX(5px);
-  }
+  .video { position: relative; padding-top: 56.25%; background: #000; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); }
+  .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
 
-  .nav a.active {
-    background: linear-gradient(90deg, rgba(94, 234, 212, 0.2), transparent);
-    border-left: 3px solid var(--brand);
-  }
+  .overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.8); display: grid; place-items: center; z-index: 1000; backdrop-filter: blur(5px); opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+  .overlay.active { opacity: 1; pointer-events: all; }
+  .modal { width: min(480px, 92vw); background: linear-gradient(145deg, #0f1a34, #0a1020); border: 1px solid var(--border); border-radius: 20px; box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6); transform: scale(0.9); transition: transform 0.3s ease; }
+  .overlay.active .modal { transform: scale(1); }
+  .modal .pad { padding: 24px; }
 
-  .section {
-    scroll-margin-top: 100px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
+  label { display: block; font-size: 14px; color: var(--muted); margin: 1em 0 0.4em; font-weight: 500; }
+  input[type="text"], input[type="password"] { width: 100%; padding: 14px; border: 1px solid var(--border); border-radius: 12px; background: rgba(11, 18, 32, 0.7); color: var(--text); font-size: 15px; transition: var(--transition); }
+  input[type="text"]:focus, input[type="password"]:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px rgba(94, 234, 212, 0.2); }
 
-  .section.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  .error { color: var(--danger); font-weight: 700; display: none; margin-top: 10px; padding: 8px 12px; background: rgba(239, 68, 68, 0.1); border-radius: 8px; border-left: 3px solid var(--danger); }
 
-  .section h2 {
-    margin: 0 0 12px;
-    font-size: clamp(20px, 4vw, 28px);
-    background: linear-gradient(to right, var(--brand), var(--brand2));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
+  footer { margin: 40px auto 60px; color: var(--muted); text-align: center; padding: 20px; border-top: 1px solid var(--border); }
 
-  .section p, .section li {
-    color: var(--muted);
-    line-height: 1.7;
-  }
+  .links a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border: 1px solid var(--border); border-radius: 999px; margin: 6px 8px 6px 0; background: rgba(10, 20, 40, 0.7); transition: var(--transition); font-size: 14px; }
+  .links a:hover { outline: 2px solid var(--accent); background: rgba(10, 20, 40, 0.9); transform: translateY(-2px); }
+  .special li { margin: 8px 0; padding-left: 8px; border-left: 2px solid var(--brand); }
 
-  .tag {
-    font-size: 12px;
-    color: #041;
-    background: linear-gradient(135deg, var(--brand), var(--brand2));
-    padding: 4px 10px;
-    border-radius: 999px;
-    font-weight: 800;
-    border: 1px solid rgba(0, 102, 0, 0.2);
-  }
+  .floatbar { position: fixed; bottom: 24px; right: 24px; display: flex; flex-direction: column; gap: 12px; z-index: 50; }
+  .floatbar .btn { padding: 12px 16px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); }
 
-  .tags {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-top: 10px;
-  }
+  @keyframes rise { from { transform: translateY(20px); opacity: 0; } to { transform: none; opacity: 1; } }
+  @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(94, 234, 212, 0.4);} 70% { box-shadow: 0 0 0 10px rgba(94, 234, 212, 0);} 100% { box-shadow: 0 0 0 0 rgba(94, 234, 212, 0);} }
+  .section, .post { animation: rise 0.6s ease both; }
+  .pulse { animation: pulse 2s infinite; }
 
-  .k {
-    font-family: ui-monospace, Menlo, Consolas, monospace;
-    background: rgba(11, 18, 32, 0.7);
-    border: 1px solid var(--border);
-    padding: 3px 8px;
-    border-radius: 8px;
-    font-size: 13px;
-  }
+  .progress-container { position: fixed; top: 0; left: 0; width: 100%; height: 4px; background: transparent; z-index: 101; }
+  .progress-bar { height: 4px; background: linear-gradient(to right, var(--brand), var(--brand2)); width: 0%; transition: width 0.3s ease; }
 
-  .muted {
-    color: var(--muted);
-  }
+  .highlight { background: linear-gradient(120deg, rgba(94, 234, 212, 0.3), rgba(34, 211, 238, 0.3)); border-radius: 4px; padding: 0 2px; font-weight: 600; }
 
-  /* Timeline / feed cards */
-  .post {
-    display: flex;
-    gap: 16px;
-    padding: 16px;
-    background: rgba(12, 20, 36, 0.5);
-    border-radius: 16px;
-    margin: 12px 0;
-    transition: var(--transition);
-  }
+  .toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--panel); color: var(--text); padding: 12px 20px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); z-index: 1000; opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; gap: 10px; }
+  .toast.show { opacity: 1; }
 
-  .post:hover {
-    background: rgba(12, 20, 36, 0.8);
-    transform: translateY(-3px);
-  }
+  .spinner { width: 20px; height: 20px; border: 3px solid rgba(94, 234, 212, 0.3); border-radius: 50%; border-top-color: var(--brand); animation: spin 1s ease-in-out infinite; display: inline-block; }
+  @keyframes spin { to { transform: rotate(360deg); } }
 
-  .post .avatar {
-    min-width: 42px;
-    height: 42px;
-    border-radius: 12px;
-    background: rgba(10, 26, 53, 0.7);
-    border: 1px solid var(--border);
-    display: grid;
-    place-items: center;
-    color: var(--muted);
-    font-size: 18px;
-    flex-shrink: 0;
-  }
+  body, .card, .btn, input, .modal { transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
 
-  .post .content {
-    flex: 1;
-  }
-
-  .post h3 {
-    margin: 0 0 6px;
-    font-size: 18px;
-  }
-
-  /* Hero */
-  .hero {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero .pad {
-    padding: 28px 20px;
-  }
-
-  .hero .glow {
-    position: absolute;
-    inset: -40px -40px auto auto;
-    width: 320px;
-    height: 320px;
-    background: radial-gradient(closest-side, rgba(34, 211, 238, 0.15), transparent);
-    filter: blur(10px);
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  /* Video */
-  .video {
-    position: relative;
-    padding-top: 56.25%;
-    background: #000;
-    border-radius: 16px;
-    overflow: hidden;
-    border: 1px solid var(--border);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  }
-
-  .video iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-
-  /* Login modal */
-  .overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.8);
-    display: grid;
-    place-items: center;
-    z-index: 1000;
-    backdrop-filter: blur(5px);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-  }
-
-  .overlay.active {
-    opacity: 1;
-    pointer-events: all;
-  }
-
-  .modal {
-    width: min(480px, 92vw);
-    background: linear-gradient(145deg, #0f1a34, #0a1020);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6);
-    transform: scale(0.9);
-    transition: transform 0.3s ease;
-  }
-
-  .overlay.active .modal {
-    transform: scale(1);
-  }
-
-  .modal .pad {
-    padding: 24px;
-  }
-
-  label {
-    display: block;
-    font-size: 14px;
-    color: var(--muted);
-    margin: 1em 0 0.4em;
-    font-weight: 500;
-  }
-
-  input[type="text"], input[type="password"] {
-    width: 100%;
-    padding: 14px;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    background: rgba(11, 18, 32, 0.7);
-    color: var(--text);
-    font-size: 15px;
-    transition: var(--transition);
-  }
-
-  input[type="text"]:focus, input[type="password"]:focus {
-    outline: none;
-    border-color: var(--brand);
-    box-shadow: 0 0 0 3px rgba(94, 234, 212, 0.2);
-  }
-
-  .error {
-    color: var(--danger);
-    font-weight: 700;
-    display: none;
-    margin-top: 10px;
-    padding: 8px 12px;
-    background: rgba(239, 68, 68, 0.1);
-    border-radius: 8px;
-    border-left: 3px solid var(--danger);
-  }
-
-  /* Footer */
-  footer {
-    margin: 40px auto 60px;
-    color: var(--muted);
-    text-align: center;
-    padding: 20px;
-    border-top: 1px solid var(--border);
-  }
-
-  /* Chips / lists */
-  .links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 8px 14px;
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    margin: 6px 8px 6px 0;
-    background: rgba(10, 20, 40, 0.7);
-    transition: var(--transition);
-    font-size: 14px;
-  }
-
-  .links a:hover {
-    outline: 2px solid var(--accent);
-    background: rgba(10, 20, 40, 0.9);
-    transform: translateY(-2px);
-  }
-
-  .special li {
-    margin: 8px 0;
-    padding-left: 8px;
-    border-left: 2px solid var(--brand);
-  }
-
-  /* Floating quick bar */
-  .floatbar {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    z-index: 50;
-  }
-
-  .floatbar .btn {
-    padding: 12px 16px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  }
-
-  /* Animations */
-  @keyframes rise {
-    from {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    to {
-      transform: none;
-      opacity: 1;
-    }
-  }
-
-  @keyframes pulse {
-    0% {
-      box-shadow: 0 0 0 0 rgba(94, 234, 212, 0.4);
-    }
-    70% {
-      box-shadow: 0 0 0 10px rgba(94, 234, 212, 0);
-    }
-    100% {
-      box-shadow: 0 0 0 0 rgba(94, 234, 212, 0);
-    }
-  }
-
-  .section, .post {
-    animation: rise 0.6s ease both;
-  }
-
-  .pulse {
-    animation: pulse 2s infinite;
-  }
-
-  /* Progress bar */
-  .progress-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: transparent;
-    z-index: 101;
-  }
-
-  .progress-bar {
-    height: 4px;
-    background: linear-gradient(to right, var(--brand), var(--brand2));
-    width: 0%;
-    transition: width 0.3s ease;
-  }
-
-  /* Search results highlight */
-  .highlight {
-    background: linear-gradient(120deg, rgba(94, 234, 212, 0.3), rgba(34, 211, 238, 0.3));
-    border-radius: 4px;
-    padding: 0 2px;
-    font-weight: 600;
-  }
-
-  /* Toast notification */
-  .toast {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--panel);
-    color: var(--text);
-    padding: 12px 20px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .toast.show {
-    opacity: 1;
-  }
-
-  /* Loading spinner */
-  .spinner {
-    width: 20px;
-    height: 20px;
-    border: 3px solid rgba(94, 234, 212, 0.3);
-    border-radius: 50%;
-    border-top-color: var(--brand);
-    animation: spin 1s ease-in-out infinite;
-    display: inline-block;
-  }
-
-  @keyframes spin {
-    to { transform: rotate(360deg); }
-  }
-
-  /* Theme transition */
-  body, .card, .btn, input, .modal {
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-  }
-
-  /* Interactive elements from second HTML */
-  .glass {
-    background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,.08);
-  }
-  
-  .shine {
-    background: linear-gradient(110deg, rgba(255,255,255,.05) 0%, rgba(255,255,255,.15) 40%, rgba(255,255,255,.05) 60%);
-    background-size: 200% 100%;
-    animation: shine 5s ease-in-out infinite;
-  }
-  
-  @keyframes shine {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-  }
-  
-  .flip-card {
-    perspective: 1000px;
-    height: 200px;
-  }
-  
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-  }
-  
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 16px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .flip-card-back {
-    transform: rotateY(180deg);
-    background: rgba(12, 20, 36, 0.5);
-  }
-  
-  .quiz-container {
-    background: rgba(12, 20, 36, 0.5);
-    border-radius: 16px;
-    padding: 20px;
-    margin: 16px 0;
-  }
-  
-  .quiz-option {
-    padding: 12px;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.05);
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .quiz-option:hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
-  
-  .quiz-option.correct {
-    background: rgba(16, 185, 129, 0.2);
-    border-left: 4px solid #10b981;
-  }
-  
-  .quiz-option.incorrect {
-    background: rgba(239, 68, 68, 0.2);
-    border-left: 4px solid #ef4444;
-  }
-  
-  .typewriter {
-    border-right: 2px solid var(--brand);
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-  }
-  
-  @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-  }
-  
-  @keyframes blink-caret {
-    from, to { border-color: transparent; }
-   50% { border-color: var(--brand); }
-  }
-  
-  .interactive-demo {
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 20px;
-    margin: 20px 0;
-    background: rgba(12, 20, 36, 0.3);
-  }
-  
-  .demo-result {
-    margin-top: 20px;
-    padding: 16px;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.05);
-    min-height: 100px;
-  }
-  
-  .hint {
-    background: rgba(245, 158, 11, 0.1);
-    border-left: 3px solid #f59e0b;
-    padding: 10px 15px;
-    border-radius: 0 8px 8px 0;
-    margin: 12px 0;
-    font-size: 14px;
-  }
+  /* Smart next button */
+  .smart-next { position: fixed; right: 24px; bottom: 92px; z-index: 60; }
 </style>
 </head>
 <body>
-<div class="progress-container">
-  <div class="progress-bar" id="progressBar"></div>
-</div>
+<div class="progress-container"><div class="progress-bar" id="progressBar"></div></div>
 
 <header id="header">
   <div class="wrap top">
     <div class="logo">IA</div>
-    <div class="brand">Mini Curso IA — Docentes 55+</div>
+    <div class="brand">CURSO PARA DOCENTES E INVESTIGADORES</div>
     <div class="search">
-      <input id="search" type="text" placeholder="Buscar secciones, conceptos o enlaces…">
+      <input id="search" type="text" placeholder="Buscar o escribe: 'herr', 'beneficios', 'video'… (atajos: / buscar, j/k navegar)">
+      <div id="suggestions" class="suggestions" role="listbox" aria-label="Sugerencias"></div>
     </div>
     <div class="actions">
       <button class="btn soft" id="toggleTheme">🌙 Modo</button>
-      <button class="btn ghost" id="printBtn">🖨️ Imprimir</button>
       <button class="btn" id="logoutBtn" style="display:none">🚪 Salir</button>
     </div>
   </div>
@@ -806,9 +206,7 @@
         <h3>Objetivo del curso</h3>
         <p class="muted">Comprender qué es la IA y aplicarla en docencia e investigación con enfoque andragógico: relevancia, autonomía y práctica guiada.</p>
         <div class="tags">
-          <span class="tag">Andragogía</span>
-          <span class="tag">Criterio</span>
-          <span class="tag">Aplicación</span>
+          <span class="tag">Andragogía</span><span class="tag">Criterio</span><span class="tag">Aplicación</span>
         </div>
       </div>
     </div>
@@ -833,281 +231,157 @@
             <div class="links">
               <a href="https://ia-para-docentes-g36p9bm.gamma.site/" target="_blank" rel="noopener">🌐 ¿Qué es la IA? (Gamma)</a>
             </div>
-            <div class="typewriter" style="margin-top: 15px; height: auto; white-space: normal; border: none;">
-              La IA puede ayudarle a preparar clases, investigar temas complejos y crear materiales educativos atractivos en menos tiempo. ¡Descubra cómo!
-            </div>
           </div>
         </div>
       </div>
       <div class="glow"></div>
     </div>
 
-    <div id="quees" class="section card">
-      <div class="pad">
-        <h2>2) ¿Qué es la Inteligencia Artificial?</h2>
+    <div id="quees" class="section card"><div class="pad"><h2>2) ¿Qué es la Inteligencia Artificial?</h2>
+      <ul>
+        <li>Definición simple: sistemas que <strong>aprenden de datos</strong> para reconocer patrones, resumir, traducir o apoyar decisiones.</li>
+        <li>Analogía útil: un "alumno aplicado" que aprende de millones de ejemplos.</li>
+        <li>Diferencia con la inteligencia humana: no "piensa" ni "siente"; <strong>predice</strong> y requiere verificación crítica.</li>
+      </ul>
+    </div></div>
+
+    <div id="beneficios" class="section card"><div class="pad"><h2>3) Beneficios para el docente</h2>
+      <div class="post"><div class="avatar">🏠</div><div class="content"><h3>Vida cotidiana</h3>
         <ul>
-          <li>Definición simple: sistemas que <strong>aprenden de datos</strong> para reconocer patrones, resumir, traducir o apoyar decisiones.</li>
-          <li>Analogía útil: un "alumno aplicado" que aprende de millones de ejemplos.</li>
-          <li>Diferencia con la inteligencia humana: no "piensa" ni "siente"; <strong>predice</strong> y requiere verificación crítica.</li>
+          <li>Redacción de correos y mensajes.</li>
+          <li>Traducción de idiomas.</li>
+          <li>Organización personal: recordatorios, citas, salud.</li>
         </ul>
-        
-        <!-- Flip card for analogy -->
-        <div class="flip-card" style="height: 180px; margin-top: 20px;">
-          <div class="flip-card-inner">
-            <div class="flip-card-front glass rounded-2xl">
-              <h4 class="font-semibold">🤔 Analogía de la IA</h4>
-              <p class="text-sm text-slate-300 mt-2">Pasa el cursor para descubrir una analogía útil...</p>
-            </div>
-            <div class="flip-card-back glass rounded-2xl">
-              <h4 class="font-semibold">🧠 La IA como asistente</h4>
-              <p class="text-sm text-slate-300 mt-2">Imagine la IA como un <strong>asistente de investigación</strong> que nunca duerme, lee millones de documentos en segundos y siempre está disponible.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="beneficios" class="section card">
-      <div class="pad">
-        <h2>3) Beneficios para el docente</h2>
-        <div class="post">
-          <div class="avatar">🏠</div>
-          <div class="content">
-            <h3>Vida cotidiana</h3>
-            <ul>
-              <li>Redacción de correos y mensajes.</li>
-              <li>Traducción de idiomas.</li>
-              <li>Organización personal: recordatorios, citas, salud.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="post">
-          <div class="avatar">🎓</div>
-          <div class="content">
-            <h3>Vida profesional</h3>
-            <ul>
-              <li>Preparación de clases, resúmenes y materiales.</li>
-              <li>Diseño de exámenes y actividades.</li>
-              <li>Búsqueda académica y redacción de proyectos.</li>
-            </ul>
-          </div>
-        </div>
-        
-        <!-- Interactive quiz -->
-        <div class="quiz-container glass mt-6">
-          <div class="quiz-question font-semibold">¿Cuál de estos es un beneficio profesional de la IA para docentes?</div>
-          <div class="quiz-options mt-3 space-y-2">
-            <div class="quiz-option" data-correct="false">Hacer la compra semanal</div>
-            <div class="quiz-option" data-correct="true">Diseño de actividades educativas</div>
-            <div class="quiz-option" data-correct="false">Conducir el automóvil</div>
-            <div class="quiz-option" data-correct="false">Cortarse el pelo</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="herr" class="section card">
-      <div class="pad">
-        <h2>4) Herramientas de IA y usos</h2>
-        <h3>A) Generales</h3>
-        <p class="links">
-          <a href="https://chat.openai.com" target="_blank" rel="noopener">🤖 ChatGPT</a>
-          <a href="https://claude.ai" target="_blank" rel="noopener">🧠 Claude</a>
-          <a href="https://gemini.google.com" target="_blank" rel="noopener">⭐ Gemini</a>
-          <a href="https://copilot.microsoft.com" target="_blank" rel="noopener">🚀 Copilot</a>
-          <a href="https://www.perplexity.ai" target="_blank" rel="noopener">🔍 Perplexity</a>
-        </p>
-        <h3>B) Docentes</h3>
-        <p class="links">
-          <a href="https://notebooklm.google.com/notebook/ddff7e00-c69a-44dc-9ac5-6debe91b2bb4" target="_blank" rel="noopener">📓 NotebookLM</a>
-          <a href="https://curipod.com" target="_blank" rel="noopener">🎯 Curipod</a>
-          <a href="https://slidesgpt.com" target="_blank" rel="noopener">📊 SlidesGPT</a>
-          <a href="https://miro.com" target="_blank" rel="noopener">🧩 Miro</a>
-          <a href="https://gamma.app" target="_blank" rel="noopener">✨ Gamma</a>
-        </p>
-        <h3>C) Avanzadas e investigación</h3>
-        <p class="links">
-          <a href="https://huggingface.co" target="_blank" rel="noopener">🤗 Hugging Face</a>
-          <a href="https://chat.deepseek.com" target="_blank" rel="noopener">🌊 DeepSeek</a>
-          <a href="https://poe.com" target="_blank" rel="noopener">🦉 Poe</a>
-          <a href="https://monica.im" target="_blank" rel="noopener">👩‍💼 Monica</a>
-        </p>
-        
-        <!-- Interactive demo: Tool selector -->
-        <div class="interactive-demo glass">
-          <h4 class="font-semibold">🔧 Selector de herramientas según necesidad</h4>
-          <div class="demo-controls flex gap-3 flex-wrap mt-4">
-            <button class="btn soft" data-tool-type="teaching">Preparar clases</button>
-            <button class="btn soft" data-tool-type="research">Investigación</button>
-            <button class="btn soft" data-tool-type="content">Crear contenido</button>
-          </div>
-          <div class="demo-result" id="toolResult">
-            <p class="text-slate-400">Seleccione una categoría para ver herramientas recomendadas...</p>
-          </div>
-        </div>
-        
-        <h4>Links especiales (recursos listos)</h4>
-        <ul class="special">
-          <li><a href="https://curipod.com/6e768639-0c4a-4d2a-89d5-2c391c3bb543/games/ba3e9cae-434b-48c2-89ac-33a47443b370/live" target="_blank" rel="noopener">🎮 Curipod — juego/lección en vivo</a></li>
-          <li><a href="https://notebooklm.google.com/notebook/ddff7e00-c69a-44dc-9ac5-6debe91b2bb4" target="_blank" rel="noopener">📔 NotebookLM — cuaderno de práctica</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div id="ceco" class="section card">
-      <div class="pad">
-        <h2>5) IA en Ciencias Económicas</h2>
-        <div class="post">
-          <div class="avatar">📈</div>
-          <div class="content">
-            <h3>Economía</h3>
-            <ul>
-              <li>Análisis de datos, proyecciones y tendencias.</li>
-              <li>Recurso: <a href="https://character.ai/chat/FCgmgPz6U_pITNY6aqdriS_Kxy624R5GdiPVgpsgVPs" target="_blank" rel="noopener">👨‍🎓 Adam Smith (Character.AI)</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="post">
-          <div class="avatar">🏢</div>
-          <div class="content">
-            <h3>Administración / Marketing</h3>
-            <ul>
-              <li>Planes estratégicos, segmentación y marketing digital.</li>
-              <li>Recurso: <a href="https://character.ai/chat/NxR9GdNoNfANWCMCt_j_vhOxg2ROkToqKXsVr5cVvmw" target="_blank" rel="noopener">👨‍💼 Philip Kotler (Character.AI)</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="post">
-          <div class="avatar">📚</div>
-          <div class="content">
-            <h3>Contaduría y Auditoría</h3>
-            <ul>
-              <li>Balances, controles y detección de irregularidades.</li>
-              <li>Recurso: <a href="https://character.ai/chat/iq8n-08jMm1v_IfKm6k87EnOhwmcYhCTNdz_PFirqvE" target="_blank" rel="noopener">👨‍🏫 Luca Pacioli (Character.AI)</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="ejemplos" class="section card">
-      <div class="pad">
-        <h2>6) Ejemplos prácticos</h2>
+      </div></div>
+      <div class="post"><div class="avatar">🎓</div><div class="content"><h3>Vida profesional</h3>
         <ul>
-          <li>ChatGPT para resumir un libro de economía.</li>
-          <li>Gamma para preparar una presentación en 10 minutos.</li>
-          <li>Perplexity/NotebookLM para revisión de artículos.</li>
-          <li>Hugging Face para investigaciones con datos reales.</li>
+          <li>Preparación de clases, resúmenes y materiales.</li>
+          <li>Diseño de exámenes y actividades.</li>
+          <li>Búsqueda académica y redacción de proyectos.</li>
         </ul>
-      </div>
-    </div>
+      </div></div>
+    </div></div>
 
-    <div id="recursos" class="section card">
-      <div class="pad">
-        <h2>7) Recursos y Video</h2>
-        <p>Video de apoyo para proyectar en clase:</p>
-        <div class="video">
-          <iframe src="https://www.youtube.com/embed/Pka3NixwYmA" title="Video de clase IA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        
-        <!-- Interactive prompt builder -->
-        <div class="interactive-demo glass mt-6">
-          <h4 class="font-semibold">🧩 Constructor de prompts para IA</h4>
-          <p class="text-slate-300">Cree instrucciones efectivas para herramientas de IA:</p>
-          <div class="demo-controls flex gap-3 flex-wrap mt-4 items-center">
-            <select id="promptType" class="btn soft">
-              <option value="summary">Resumir contenido</option>
-              <option value="explain">Explicar concepto</option>
-              <option value="create">Crear actividad</option>
-              <option value="analyze">Analizar datos</option>
-            </select>
-            <input type="text" id="promptTopic" placeholder="Tema o concepto" class="btn soft" style="flex-grow: 1">
-          </div>
-          <button id="generatePrompt" class="btn" style="margin-top: 15px">Generar instrucción</button>
-          <div class="demo-result" id="promptResult">
-            <p class="text-slate-400">Su instrucción para IA aparecerá aquí...</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="herr" class="section card"><div class="pad"><h2>4) Herramientas de IA y usos</h2>
+      <h3>A) Generales</h3>
+      <p class="links">
+        <a href="https://chat.openai.com" target="_blank" rel="noopener">🤖 ChatGPT</a>
+        <a href="https://claude.ai" target="_blank" rel="noopener">🧠 Claude</a>
+        <a href="https://gemini.google.com" target="_blank" rel="noopener">⭐ Gemini</a>
+        <a href="https://copilot.microsoft.com" target="_blank" rel="noopener">🚀 Copilot</a>
+        <a href="https://www.perplexity.ai" target="_blank" rel="noopener">🔍 Perplexity</a>
+      </p>
+      <h3>B) Docentes</h3>
+      <p class="links">
+        <a href="https://notebooklm.google.com/notebook/ddff7e00-c69a-44dc-9ac5-6debe91b2bb4" target="_blank" rel="noopener">📓 NotebookLM</a>
+        <a href="https://curipod.com" target="_blank" rel="noopener">🎯 Curipod</a>
+        <a href="https://slidesgpt.com" target="_blank" rel="noopener">📊 SlidesGPT</a>
+        <a href="https://miro.com" target="_blank" rel="noopener">🧩 Miro</a>
+        <a href="https://gamma.app" target="_blank" rel="noopener">✨ Gamma</a>
+      </p>
+      <h3>C) Avanzadas e investigación</h3>
+      <p class="links">
+        <a href="https://huggingface.co" target="_blank" rel="noopener">🤗 Hugging Face</a>
+        <a href="https://chat.deepseek.com" target="_blank" rel="noopener">🌊 DeepSeek</a>
+        <a href="https://poe.com" target="_blank" rel="noopener">🦉 Poe</a>
+        <a href="https://monica.im" target="_blank" rel="noopener">👩‍💼 Monica</a>
+      </p>
+      <h4>Links especiales (recursos listos)</h4>
+      <ul class="special">
+        <li><a href="https://curipod.com/6e768639-0c4a-4d2a-89d5-2c391c3bb543/games/ba3e9cae-434b-48c2-89ac-33a47443b370/live" target="_blank" rel="noopener">🎮 Curipod — juego/lección en vivo</a></li>
+        <li><a href="https://notebooklm.google.com/notebook/ddff7e00-c69a-44dc-9ac5-6debe91b2bb4" target="_blank" rel="noopener">📔 NotebookLM — cuaderno de práctica</a></li>
+      </ul>
+    </div></div>
 
-    <div id="cierre" class="section card">
-      <div class="pad">
-        <h2>Cierre</h2>
+    <div id="ceco" class="section card"><div class="pad"><h2>5) IA en Ciencias Económicas</h2>
+      <div class="post"><div class="avatar">📈</div><div class="content"><h3>Economía</h3>
         <ul>
-          <li>La IA es la <strong>calculadora del conocimiento</strong>: nos permite hacer más en menos tiempo.</li>
-          <li>El rol del docente se fortalece: menos tareas mecánicas, más enseñanza y pensamiento crítico.</li>
+          <li>Análisis de datos, proyecciones y tendencias.</li>
+          <li>Recurso: <a href="https://character.ai/chat/FCgmgPz6U_pITNY6aqdriS_Kxy624R5GdiPVgpsgVPs" target="_blank" rel="noopener">👨‍🎓 Adam Smith (Character.AI)</a></li>
         </ul>
-        <div class="hint">
-          💡 <strong>Recordatorio:</strong> Use siempre su criterio profesional al utilizar herramientas de IA. Verifique la información y adapte los resultados a su contexto específico.
-        </div>
-        <p><strong>Creado por: Dr. José Rodolfo Chávez Mejía. Derechos reservados 2025.</strong></p>
-      </div>
-    </div>
+      </div></div>
+      <div class="post"><div class="avatar">🏢</div><div class="content"><h3>Administración / Marketing</h3>
+        <ul>
+          <li>Planes estratégicos, segmentación y marketing digital.</li>
+          <li>Recurso: <a href="https://character.ai/chat/NxR9GdNoNfANWCMCt_j_vhOxg2ROkToqKXsVr5cVvmw" target="_blank" rel="noopener">👨‍💼 Philip Kotler (Character.AI)</a></li>
+        </ul>
+      </div></div>
+      <div class="post"><div class="avatar">📚</div><div class="content"><h3>Contaduría y Auditoría</h3>
+        <ul>
+          <li>Balances, controles y detección de irregularidades.</li>
+          <li>Recurso: <a href="https://character.ai/chat/iq8n-08jMm1v_IfKm6k87EnOhwmcYhCTNdz_PFirqvE" target="_blank" rel="noopener">👨‍🏫 Luca Pacioli (Character.AI)</a></li>
+        </ul>
+      </div></div>
+    </div></div>
+
+    <div id="ejemplos" class="section card"><div class="pad"><h2>6) Ejemplos prácticos</h2>
+      <ul>
+        <li>ChatGPT para resumir un libro de economía.</li>
+        <li>Gamma para preparar una presentación en 10 minutos.</li>
+        <li>Perplexity/NotebookLM para revisión de artículos.</li>
+        <li>Hugging Face para investigaciones con datos reales.</li>
+      </ul>
+    </div></div>
+
+    <div id="recursos" class="section card"><div class="pad"><h2>7) Recursos y Video</h2>
+      <p>Video de apoyo para proyectar en clase:</p>
+      <div class="video"><iframe src="https://www.youtube.com/embed/Pka3NixwYmA" title="Video de clase IA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    </div></div>
+
+    <div id="cierre" class="section card"><div class="pad"><h2>Cierre</h2>
+      <ul>
+        <li>La IA es la <strong>calculadora del conocimiento</strong>: nos permite hacer más en menos tiempo.</li>
+        <li>El rol del docente se fortalece: menos tareas mecánicas, más enseñanza y pensamiento crítico.</li>
+      </ul>
+      <p><strong>Creado por: Dr. José Rodolfo Chávez Mejía. Derechos reservados 2025.</strong></p>
+    </div></div>
   </section>
 </div>
 
 <footer class="wrap">Creado por el <strong>Dr. José Rodolfo Chávez Mejía</strong>. Derechos reservados 2025. — Herramienta para aprender a usar la Inteligencia Artificial.</footer>
 
 <!-- LOGIN MODAL -->
-<div id="login" class="overlay active">
-  <div class="modal">
-    <div class="pad">
-      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px">
-        <div class="logo">IA</div>
-        <h3 style="margin:0">Acceso — Mini Curso IA</h3>
-      </div>
-      <p class="muted">Ingrese la misma credencial para usuario y contraseña.</p>
-      <label for="user">Credencial de acceso</label>
-      <input id="user" type="text" placeholder="Ingrese su credencial" autocomplete="username">
-      <button class="btn" id="go">Entrar <span class="spinner" id="loginSpinner" style="display:none"></span></button>
-      <div id="err" class="error">Credencial incorrecta. Intente nuevamente.</div>
-      <div class="hint">
-        💡 <strong>Ayuda:</strong> Utilice la misma palabra para usuario y contraseña. Piense en el grupo objetivo de este curso (docentes 55+).
-      </div>
-    </div>
-  </div>
-</div>
+<div id="login" class="overlay"><div class="modal"><div class="pad">
+  <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px"><div class="logo">IA</div><h3 style="margin:0">Acceso — Mini Curso IA</h3></div>
+  <p class="muted">Ingrese sus credenciales para continuar.</p>
+  <label for="user">Usuario</label>
+  <input id="user" type="text" placeholder="Usuario" autocomplete="username">
+  <label for="pass">Clave</label>
+  <input id="pass" type="password" placeholder="Clave" autocomplete="current-password">
+  <button class="btn" id="go">Entrar <span class="spinner" id="loginSpinner" style="display:none"></span></button>
+  <div id="err" class="error">Usuario o clave incorrectos.</div>
+  <p class="muted" style="font-size:12px; margin-top:12px">Para la sesión: Usuario <span class="k">JChavez</span> · Clave <span class="k">Docentes</span></p>
+</div></div></div>
 
 <div class="floatbar">
   <button class="btn soft" id="backTop">↑ Arriba</button>
   <button class="btn ghost" id="saveHTML">💾 Guardar</button>
+  <button class="btn smart-next" id="smartNext">Siguiente sección →</button>
 </div>
 
-<div id="toast" class="toast">
-  <span id="toastMessage"></span>
-</div>
+<div id="toast" class="toast"><span id="toastMessage"></span></div>
 
 <script>
-  // THEME TOGGLE
-  const root = document.documentElement;
-  const toggleTheme = document.getElementById('toggleTheme');
-  const savedTheme = localStorage.getItem('theme') || 'dark';
-  
-  // Apply saved theme
-  if (savedTheme === 'light') {
-    document.documentElement.setAttribute('data-theme', 'light');
-    toggleTheme.textContent = '☀️ Modo';
-  } else {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    toggleTheme.textContent = '🌙 Modo';
-  }
-  
-  toggleTheme.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    if (currentTheme === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'light');
-      localStorage.setItem('theme', 'light');
-      toggleTheme.textContent = '☀️ Modo';
-    } else {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      localStorage.setItem('theme', 'dark');
-      toggleTheme.textContent = '🌙 Modo';
+  // KEYBOARD SHORTCUTS HINT
+  window.addEventListener('load', () => {
+    if (!localStorage.getItem('hint_shown')) {
+      showToast('Usa / para buscar, j/k para moverte entre secciones, Enter para abrir sugerencia');
+      localStorage.setItem('hint_shown','1');
     }
   });
 
-  // PRINT
-  document.getElementById('printBtn').addEventListener('click', () => window.print());
+  // THEME TOGGLE
+  const toggleTheme = document.getElementById('toggleTheme');
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  if (savedTheme === 'light') { document.documentElement.setAttribute('data-theme', 'light'); toggleTheme.textContent = '☀️ Modo'; }
+  else { document.documentElement.setAttribute('data-theme', 'dark'); toggleTheme.textContent = '🌙 Modo'; }
+  toggleTheme.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const next = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    toggleTheme.textContent = next === 'light' ? '☀️ Modo' : '🌙 Modo';
+  });
 
   // SAVE HTML
   document.getElementById('saveHTML').addEventListener('click', () => {
@@ -1115,9 +389,7 @@
     const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
-    a.href = url;
-    a.download = 'MiniCursoIA_Docentes55.html';
-    a.click();
+    a.href = url; a.download = 'Curso_Docentes_Investigadores.html'; a.click();
     URL.revokeObjectURL(url);
     showToast('Página guardada correctamente');
   });
@@ -1125,302 +397,158 @@
   // BACK TO TOP
   document.getElementById('backTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-  // SEARCH FUNCTIONALITY
+  // SEARCH + PREDICTIVE SUGGESTIONS
   const search = document.getElementById('search');
-  const sections = document.querySelectorAll('.section');
-  let searchTimeout = null;
+  const suggestions = document.getElementById('suggestions');
+  const sections = Array.from(document.querySelectorAll('.section'));
+  let idx = -1;
 
-  search.addEventListener('input', () => {
-    clearTimeout(searchTimeout);
-    searchTimeout = setTimeout(() => {
-      const q = search.value.toLowerCase().trim();
-      
-      // Remove previous highlights
-      document.querySelectorAll('.highlight').forEach(el => {
-        const parent = el.parentNode;
-        parent.replaceChild(document.createTextNode(el.textContent), el);
-        parent.normalize();
-      });
-      
-      if (q.length < 2) {
-        sections.forEach(sec => {
-          sec.style.display = '';
-          sec.classList.remove('search-match');
-        });
-        return;
-      }
-      
-      let found = false;
-      sections.forEach(sec => {
-        const text = sec.textContent.toLowerCase();
-        if (text.includes(q)) {
-          sec.style.display = '';
-          sec.classList.add('search-match');
-          
-          // Highlight text
-          highlightText(sec, q);
-          
-          if (!found) {
-            sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            found = true;
-          }
-        } else {
-          sec.style.display = 'none';
-          sec.classList.remove('search-match');
-        }
-      });
-    }, 300);
-  });
+  const catalog = [
+    {id:'#intro', label:'Introducción', alias:['intro','bienvenida']},
+    {id:'#quees', label:'¿Qué es IA?', alias:['que es','definicion','ia']},
+    {id:'#beneficios', label:'Beneficios', alias:['ventajas','beneficios']},
+    {id:'#herr', label:'Herramientas', alias:['herr','apps','chatgpt','gemini','claude']},
+    {id:'#ceco', label:'Ciencias Económicas', alias:['economia','marketing','contaduria']},
+    {id:'#ejemplos', label:'Ejemplos prácticos', alias:['ejemplos','casos']},
+    {id:'#recursos', label:'Recursos y Video', alias:['video','recursos','youtube']},
+    {id:'#cierre', label:'Cierre', alias:['final','cierre']},
+  ];
 
-  function highlightText(element, searchText) {
-    const regex = new RegExp(`(${searchText})`, 'gi');
-    findTextNodes(element).forEach(node => {
-      const parent = node.parentNode;
-      if (parent.classList.contains('highlight') || parent.nodeName === 'SCRIPT' || parent.nodeName === 'STYLE') {
-        return;
-      }
-      
-      const text = node.textContent;
-      if (regex.test(text)) {
-        const newHTML = text.replace(regex, '<span class="highlight">$1</span>');
-        const newElement = document.createElement('span');
-        newElement.innerHTML = newHTML;
-        parent.replaceChild(newElement, node);
+  // Seed quick intents (predictive chips)
+  const intents = [
+    {text:'abrir curipod', go: () => window.open('https://curipod.com/6e768639-0c4a-4d2a-89d5-2c391c3bb543/games/ba3e9cae-434b-48c2-89ac-33a47443b370/live','_blank')},
+    {text:'notebooklm', go: () => window.open('https://notebooklm.google.com/notebook/ddff7e00-c69a-44dc-9ac5-6debe91b2bb4','_blank')},
+    {text:'ir a herramientas', go: () => location.hash = '#herr'},
+  ];
+
+  function buildSuggestions(q) {
+    const items = [];
+    const qn = q.toLowerCase().trim();
+    // intents first
+    intents.forEach((i) => { if (i.text.includes(qn) && qn.length>0) items.push({type:'intent', label:i.text, action:i.go}); });
+    // sections
+    catalog.forEach(s => {
+      if (s.label.toLowerCase().includes(qn) || s.alias.some(a => a.includes(qn))) {
+        items.push({type:'section', label:s.label, href:s.id});
       }
     });
+    // history
+    const history = JSON.parse(localStorage.getItem('click_history')||'[]');
+    history.filter(h => h.label.toLowerCase().includes(qn)).forEach(h=>items.push({type:'history', label:h.label, href:h.id}));
+    return items.slice(0,7);
   }
 
-  function findTextNodes(element) {
-    const textNodes = [];
-    const walk = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
-    let node;
-    while (node = walk.nextNode()) {
-      if (node.textContent.trim().length > 0) {
-        textNodes.push(node);
-      }
+  function renderSuggestions(list){
+    suggestions.innerHTML='';
+    if (!list.length) { suggestions.classList.remove('visible'); return; }
+    list.forEach((it, i)=>{
+      const div = document.createElement('div');
+      div.className = 'suggestion';
+      div.setAttribute('role','option');
+      div.dataset.index = i;
+      if (it.type==='section'||it.type==='history') div.innerHTML = '📄 <span>'+it.label+'</span><small>'+ (it.type==='history'?'reciente':'sección') +'</small>';
+      else div.innerHTML = '⚡ <span>'+it.label+'</span><small>acción</small>';
+      div.addEventListener('click', ()=>applySuggestion(it));
+      suggestions.appendChild(div);
+    });
+    suggestions.classList.add('visible');
+  }
+
+  function applySuggestion(it){
+    suggestions.classList.remove('visible'); idx=-1; search.blur();
+    if (it.href){
+      location.hash = it.href;
+      rememberClick(it.href, it.label);
+    } else if (it.action){ it.action(); }
+  }
+
+  function rememberClick(id,label){
+    const history = JSON.parse(localStorage.getItem('click_history')||'[]');
+    const next = [{id, label}, ...history.filter(h=>h.id!==id)].slice(0,5);
+    localStorage.setItem('click_history', JSON.stringify(next));
+  }
+
+  let searchTimeout = null;
+  search.addEventListener('input', ()=>{
+    clearTimeout(searchTimeout);
+    const q = search.value;
+    searchTimeout = setTimeout(()=>{ renderSuggestions(buildSuggestions(q)); }, 200);
+  });
+
+  // keyboard shortcuts
+  document.addEventListener('keydown', (e)=>{
+    if (e.key === '/' && document.activeElement !== search){ e.preventDefault(); search.focus(); }
+    if (suggestions.classList.contains('visible')){
+      const opts = Array.from(suggestions.children);
+      if (e.key==='ArrowDown'){ idx = (idx+1) % opts.length; updateActive(opts); }
+      if (e.key==='ArrowUp'){ idx = (idx-1+opts.length) % opts.length; updateActive(opts); }
+      if (e.key==='Enter' && idx>-1){ opts[idx].click(); }
+      if (e.key==='Escape'){ suggestions.classList.remove('visible'); idx=-1; }
+    } else {
+      // j/k navigation between sections
+      if (['INPUT','TEXTAREA'].includes(document.activeElement.tagName)) return;
+      if (e.key==='j') scrollToRelative(1);
+      if (e.key==='k') scrollToRelative(-1);
     }
-    return textNodes;
+  });
+
+  function updateActive(opts){ opts.forEach(o=>o.classList.remove('active')); if (opts[idx]) opts[idx].classList.add('active'); }
+
+  function scrollToRelative(dir){
+    const tops = sections.map(s=>s.getBoundingClientRect().top);
+    const current = tops.findIndex(t=>t>0 && t<window.innerHeight*0.6);
+    let targetIndex = current + dir;
+    if (current===-1) targetIndex = dir>0?0:sections.length-1;
+    targetIndex = Math.max(0, Math.min(sections.length-1, targetIndex));
+    sections[targetIndex].scrollIntoView({behavior:'smooth', block:'start'});
   }
 
-  // LOGIN - CORREGIDO
+  // LOGIN
   const ov = document.getElementById('login');
   const go = document.getElementById('go');
   const err = document.getElementById('err');
   const user = document.getElementById('user');
+  const pass = document.getElementById('pass');
   const logoutBtn = document.getElementById('logoutBtn');
   const loginSpinner = document.getElementById('loginSpinner');
 
   function enter() {
     const u = (user.value || '').trim();
-    
-    if (u === '') {
-      err.textContent = 'Por favor ingrese la credencial';
-      err.style.display = 'block';
-      return;
-    }
-    
-    // Show loading spinner
-    loginSpinner.style.display = 'inline-block';
-    go.disabled = true;
-    
-    // Simulate network delay
+    const p = (pass.value || '').trim();
+    if (u === '' || p === '') { err.textContent = 'Por favor complete todos los campos'; err.style.display = 'block'; return; }
+    loginSpinner.style.display = 'inline-block'; go.disabled = true;
     setTimeout(() => {
-      // CORRECCIÓN: Ahora solo se usa "Docentes55+" como credencial
-      if (u === 'Docentes55+') {
-        ov.classList.remove('active');
-        err.style.display = 'none';
-        localStorage.setItem('auth_mc_ia', '1');
-        logoutBtn.style.display = '';
-        showToast('¡Bienvenido al curso!');
-      } else {
-        err.textContent = 'Credencial incorrecta. Intente con "Docentes55+"';
-        err.style.display = 'block';
-      }
-      loginSpinner.style.display = 'none';
-      go.disabled = false;
+      if (u === 'JChavez' && p === 'Docentes') {
+        ov.classList.remove('active'); err.style.display = 'none'; localStorage.setItem('auth_mc_ia', '1'); logoutBtn.style.display = ''; showToast('Sesión iniciada correctamente'); location.hash = '#intro';
+      } else { err.textContent = 'Usuario o clave incorrectos'; err.style.display = 'block'; }
+      loginSpinner.style.display = 'none'; go.disabled = false;
     }, 800);
   }
-  
   go.addEventListener('click', enter);
-  user.addEventListener('keydown', e => { if (e.key === 'Enter') enter(); });
+  pass.addEventListener('keydown', e => { if (e.key === 'Enter') enter(); });
 
-  // Persist session
-  if (localStorage.getItem('auth_mc_ia') === '1') {
-    ov.classList.remove('active');
-    logoutBtn.style.display = '';
-  } else {
-    ov.classList.add('active');
-  }
+  if (localStorage.getItem('auth_mc_ia') === '1') { ov.classList.remove('active'); logoutBtn.style.display = ''; } else { ov.classList.add('active'); }
+  logoutBtn.addEventListener('click', () => { localStorage.removeItem('auth_mc_ia'); showToast('Sesión cerrada'); setTimeout(() => location.reload(), 1000); });
 
-  logoutBtn.addEventListener('click', () => {
-    localStorage.removeItem('auth_mc_ia');
-    showToast('Sesión cerrada');
-    setTimeout(() => location.reload(), 1000);
-  });
-
-  // SCROLL PROGRESS
+  // SCROLL PROGRESS + smart active nav
   window.addEventListener('scroll', () => {
-    const winHeight = window.innerHeight;
-    const docHeight = document.documentElement.scrollHeight;
-    const scrolled = window.scrollY;
-    const progress = (scrolled / (docHeight - winHeight)) * 100;
-    document.getElementById('progressBar').style.width = progress + '%';
-    
-    // Header shadow on scroll
-    const header = document.getElementById('header');
-    if (window.scrollY > 50) {
-      header.classList.add('header-scrolled');
-    } else {
-      header.classList.remove('header-scrolled');
-    }
-    
-    // Section animation on scroll
-    document.querySelectorAll('.section').forEach(section => {
-      const sectionTop = section.getBoundingClientRect().top;
-      if (sectionTop < window.innerHeight * 0.75) {
-        section.classList.add('visible');
-      }
-    });
-    
-    // Update active nav link
+    const winHeight = window.innerHeight; const docHeight = document.documentElement.scrollHeight; const scrolled = window.scrollY; const progress = (scrolled / (docHeight - winHeight)) * 100; document.getElementById('progressBar').style.width = progress + '%';
+    const header = document.getElementById('header'); if (window.scrollY > 50) header.classList.add('header-scrolled'); else header.classList.remove('header-scrolled');
+    document.querySelectorAll('.section').forEach(section => { const sectionTop = section.getBoundingClientRect().top; if (sectionTop < window.innerHeight * 0.75) { section.classList.add('visible'); } });
     const scrollPosition = window.scrollY + 100;
-    document.querySelectorAll('.nav a').forEach(link => {
-      const section = document.querySelector(link.getAttribute('href'));
-      if (section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
-        document.querySelectorAll('.nav a').forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-      }
+    document.querySelectorAll('.nav a').forEach(link => { const section = document.querySelector(link.getAttribute('href')); if (section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) { document.querySelectorAll('.nav a').forEach(l => l.classList.remove('active')); link.classList.add('active'); }
     });
   });
 
-  // Toast notification
-  function showToast(message) {
-    const toast = document.getElementById('toast');
-    const toastMessage = document.getElementById('toastMessage');
-    toastMessage.textContent = message;
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 3000);
-  }
+  // Smart NEXT button
+  document.getElementById('smartNext').addEventListener('click', ()=>scrollToRelative(1));
 
-  // Initialize functionality when DOM is loaded
+  // Toast
+  function showToast(message) { const toast = document.getElementById('toast'); const toastMessage = document.getElementById('toastMessage'); toastMessage.textContent = message; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 3000); }
+
+  // Reveal on load
   document.addEventListener('DOMContentLoaded', () => {
-    // Initialize sections animation
-    document.querySelectorAll('.section').forEach((section, index) => {
-      section.style.transitionDelay = `${index * 0.1}s`;
-      if (section.getBoundingClientRect().top < window.innerHeight * 0.75) {
-        section.classList.add('visible');
-      }
-    });
-
-    // Quiz functionality
-    document.querySelectorAll('.quiz-option').forEach(option => {
-      option.addEventListener('click', function() {
-        const isCorrect = this.getAttribute('data-correct') === 'true';
-        const options = this.parentElement.querySelectorAll('.quiz-option');
-        
-        options.forEach(opt => {
-          opt.removeEventListener('click', this);
-          if (opt.getAttribute('data-correct') === 'true') {
-            opt.classList.add('correct');
-          } else {
-            opt.classList.add('incorrect');
-          }
-        });
-
-        if (isCorrect) {
-          showToast('¡Correcto! Buen trabajo.');
-        } else {
-          showToast('Intente nuevamente. Revise las opciones.');
-        }
-      });
-    });
-
-    // Tool selector functionality
-    const toolButtons = document.querySelectorAll('[data-tool-type]');
-    const toolResult = document.getElementById('toolResult');
-    
-    const tools = {
-      teaching: {
-        title: "🖊️ Para preparar clases",
-        content: "<ul class='text-sm text-slate-300 space-y-1'><li><strong>NotebookLM</strong>: Para analizar sus materiales y generar resúmenes</li><li><strong>Curipod</strong>: Para crear presentaciones interactivas</li><li><strong>Gamma</strong>: Para diseñar materiales visuales atractivos</li></ul>"
-      },
-      research: {
-        title: "🔍 Para investigación",
-        content: "<ul class='text-sm text-slate-300 space-y-1'><li><strong>Perplexity</strong>: Para búsquedas académicas con fuentes</li><li><strong>Hugging Face</strong>: Para análisis de datos especializados</li><li><strong>Elicit</strong>: Para revisión de literatura académica</li></ul>"
-      },
-      content: {
-        title: "🎨 Para crear contenido",
-        content: "<ul class='text-sm text-slate-300 space-y-1'><li><strong>ChatGPT</strong>: Para generar textos y explicaciones</li><li><strong>SlidesGPT</strong>: Para crear presentaciones rápidamente</li><li><strong>Canva</strong>: Para diseñar elementos visuales con IA</li></ul>"
-      }
-    };
-
-    toolButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        const toolType = this.getAttribute('data-tool-type');
-        toolResult.innerHTML = `<h5 class='font-semibold mb-2'>${tools[toolType].title}</h5>${tools[toolType].content}`;
-      });
-    });
-
-    // Prompt generator functionality
-    const generatePromptBtn = document.getElementById('generatePrompt');
-    const promptType = document.getElementById('promptType');
-    const promptTopic = document.getElementById('promptTopic');
-    const promptResult = document.getElementById('promptResult');
-    
-    generatePromptBtn.addEventListener('click', function() {
-      const type = promptType.value;
-      const topic = promptTopic.value.trim();
-      
-      if (!topic) {
-        showToast('Por favor ingrese un tema');
-        return;
-      }
-      
-      let prompt = '';
-      
-      switch(type) {
-        case 'summary':
-          prompt = `Resuma el siguiente contenido sobre "${topic}" en puntos clave, destacando los conceptos más importantes y sus aplicaciones prácticas. El resumen debe ser claro y conciso.`;
-          break;
-        case 'explain':
-          prompt = `Explique el concepto de "${topic}" como si se lo estuviera explicando a estudiantes universitarios. Use analogías y ejemplos concretos relacionados con las ciencias económicas.`;
-          break;
-        case 'create':
-          prompt = `Diseñe una actividad de aprendizaje sobre "${topic}" para estudiantes de economía. La actividad debe ser interactiva, aplicar conceptos teóricos a casos prácticos y incluir instrucciones claras.`;
-          break;
-        case 'analyze':
-          prompt = `Analice críticamente la siguiente información sobre "${topic}". Identifique tendencias, posibles sesgos en los datos, y sugiera interpretaciones alternativas basadas en evidencia económica.`;
-          break;
-      }
-      
-      promptResult.innerHTML = `<p class='text-sm font-semibold mb-2'>Instrucción para IA:</p><div class='text-sm bg-slate-800/40 p-3 rounded-xl'>${prompt}</div><p class='text-xs text-slate-400 mt-2'>Copia y pega esta instrucción en tu herramienta de IA favorita.</p>`;
-    });
-
-    // Typewriter effect
-    const typewriterElement = document.querySelector('.typewriter');
-    const text = typewriterElement.textContent;
-    typewriterElement.textContent = '';
-    let i = 0;
-    
-    function typeWriter() {
-      if (i < text.length) {
-        typewriterElement.textContent += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, 50);
-      }
-    }
-    
-    // Start typewriter effect when the section is visible
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          typeWriter();
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-    
-    observer.observe(document.getElementById('intro'));
+    document.querySelectorAll('.section').forEach((section, index) => { section.style.transitionDelay = `${index * 0.1}s`; if (section.getBoundingClientRect().top < window.innerHeight * 0.75) { section.classList.add('visible'); } });
   });
 </script>
 </body>
